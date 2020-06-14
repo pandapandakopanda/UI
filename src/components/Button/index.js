@@ -5,24 +5,9 @@ import { calcClass } from '../../utils/help'
 
 
 class Button extends Component {
-state = {
-  isAnimatedBckgShow: false,
-}
-
-
   onClickHandler = () => {
     if (this.props.disable) return
     this.props.onclick()
-  }
-
-  mouseOver =() => {
-    if (this.props.preset !== 'animated') return
-    this.setState({ isAnimatedBckgShow: true })
-  }
-
-  mouseOut=() => {
-    if (this.props.preset !== 'animated') return
-    this.setState({ isAnimatedBckgShow: false })
   }
 
 
@@ -36,18 +21,13 @@ state = {
       disable,
     }, ST)
 
-    const animatedButtonStyle = this.state.isAnimatedBckgShow ? ST.show : ST.hide
-
-
     return (
       <div
         className={className}
         onClick={this.onClickHandler}
-        onMouseOver={this.mouseOver}
-        onMouseOut={this.mouseOut}
       >
-        <div className={isAnimated ? animatedButtonStyle : ''} />
         {children}
+        <div className={isAnimated ? ST.show : ''}>{this.props.animatedText}</div>
       </div>
     )
   }

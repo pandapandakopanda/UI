@@ -1,24 +1,41 @@
 import React, { Component } from 'react'
+import { BaseLink, withRoute } from 'react-router5'
 import ST from './index.scss'
+import Button from '../Button'
 
 
 class Nav extends Component {
-  componentsList = ['Button']
+  componentsList = ['Button', 'Input']
+
+  state={
+    isNavHidden: false,
+  }
+
+  onclick=() => {
+    const isHidden = this.state.isNavHidden
+    this.setState({ isNavHidden: !isHidden })
+  }
 
   render() {
+    const { router } = this.props
     const components = this.componentsList.map((el) => (
-      <div className={ST.navButton} key={this.componentsList.indexOf(el)}>
-        {' '}
-        {el}
-        {' '}
-      </div>
+      <BaseLink
+        key={el}
+        router={router}
+        routeName={el}
+      >
+        <Button preset="primary">{el}</Button>
+      </BaseLink>
     ))
+
+    const wrapperClassName = !this.state.isNavHidden ? ST.wrapper : ST.wrapperHide
     return (
-      <div className={ST.wrapper}>
-        {components}
+      <div className={wrapperClassName}>
+        <div className={ST.buttonWrapper}>{components}</div>
+        <div className={ST.arrow} onClick={this.onclick} />
       </div>
     )
   }
 }
 
-export default Nav
+export default withRoute(Nav)

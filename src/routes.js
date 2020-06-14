@@ -1,3 +1,4 @@
 export default [
-  { name: 'buttonStand', path: '/buttonStand' },
+  { name: 'Button', path: '/buttonStand' },
+  { name: 'Input', path: '/inputStand' },
 ]

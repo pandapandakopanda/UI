@@ -1,6 +1,7 @@
 .button {
   display: flex;
   overflow: hidden;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 80px;
@@ -13,38 +14,53 @@
   font-size: smaller;
   margin: 5px;
 }
+.name {
+  position: absolute;
+}
 
 .primary {
   background-color: rgb(221, 57, 85);
+  transition: all 0.3s;
+  &:hover {
+    background-color: rgb(34, 7, 12);
+  }
 }
 
 .secondary {
   background-color:rgb(34, 7, 12);
-}
-
-.animated {
-  background-color:rgb(87, 87, 105);
-  transition: background-color 1s;
-  &:hover{
-    background-color:rgb(221, 57, 85);
+  transition: all 0.3s; 
+  &:hover {
+    background-color: rgb(221, 57, 85);
   }
 }
 
-.show, .hide{
+.animated {
+  background-image:url('../images/cloud.jpg');
+  background-size: cover;
+  transition: background-color 1s;
+  &:hover{
+
+    .show{
+      margin-left: -80px;
+    }
+
+
+  }
+}
+
+.show{
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 20px;
   border-radius: 2px;
   background-image: url('../images/star-back.jpg');
-  background-size: cover;
+  background-size: cover; 
   transition: all 0.5s;
 }
 
-.hide {
-  background-image:url('../images/cloud.jpg');
-  background-size:cover;   
-  transition: all 0.5s;
-}
 
 .disable{
   background-color: lightgray;

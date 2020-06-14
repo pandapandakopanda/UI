@@ -11,7 +11,7 @@ export default class ButtonStand extends Component {
     return (
       <div className={ST.wrapper}>
         <section>
-          Standart:
+          Default:
           <Button />
         </section>
         <section>
@@ -24,11 +24,15 @@ export default class ButtonStand extends Component {
         </section>
         <section>
           Animated:
-          <Button preset="animated" />
+          <Button preset="animated" animatedText="Hello">Your Text</Button>
         </section>
         <section>
           Disabled:
           <Button preset="" disable />
+        </section>
+        <section>
+          Animation Disabled:
+          <Button preset="animated" disable>Not Allowed</Button>
         </section>
 
 
