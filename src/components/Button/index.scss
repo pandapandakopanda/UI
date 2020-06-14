@@ -1,0 +1,53 @@
+.button {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: rgb(87, 87, 105);
+  color: whitesmoke;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: smaller;
+  margin: 5px;
+}
+
+.primary {
+  background-color: rgb(221, 57, 85);
+}
+
+.secondary {
+  background-color:rgb(34, 7, 12);
+}
+
+.animated {
+  background-color:rgb(87, 87, 105);
+  transition: background-color 1s;
+  &:hover{
+    background-color:rgb(221, 57, 85);
+  }
+}
+
+.show, .hide{
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  border-radius: 2px;
+  background-image: url('../images/star-back.jpg');
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.hide {
+  background-image:url('../images/cloud.jpg');
+  background-size:cover;   
+  transition: all 0.5s;
+}
+
+.disable{
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+

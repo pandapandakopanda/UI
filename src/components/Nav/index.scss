@@ -1,0 +1,22 @@
+.navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s,
+              color 0.2s;
+  &:hover {
+    background-color: black;
+    color: white
+  }
+}
+
+.wrapper {
+  min-height: 99vh;
+  border: 1px solid red;
+}
