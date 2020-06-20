@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ST from './index.scss'
-import Button from '../Button'
+import Button from '../../Button'
 
 
 export default class ButtonStand extends Component {
