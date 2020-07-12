@@ -10,7 +10,7 @@
 }
 .wrapper, .wrapperHide {
   width: 100px;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: row;
   min-height: 100vh;

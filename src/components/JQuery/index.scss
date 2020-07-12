@@ -1,0 +1,70 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+.squaries{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.meow {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#zero {
+  background-color: rgb(211, 32, 106);
+}
+
+#one{
+  background-color: rgb(185, 50, 212)
+}
+
+#two{
+  background-color: rgb(66, 94, 218)
+}
+
+#three{
+  background-color: rgb(238, 246, 248)
+}
+
+#four{
+  background-color: rgb(219, 56, 35)
+}
+
+.sectionWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 20px;
+  background-color: rgb(252, 252, 252);
+  border-radius: 2px 2px 0 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  background-color: rgb(252, 252, 252);
+  border-radius: 0 0 2px 2px ;
+  border-top: 1px solid rgb(206, 204, 204);
+}

@@ -6,6 +6,8 @@ import Empty from '../Empty'
 import ButtonStand from '../Stand/ButtonStand'
 import InputStand from '../Stand/InputStand'
 import ModalStand from '../Stand/ModalStand'
+import CssStand from '../Stand/CssStand'
+import JqueryStand from '../Stand/JqueryStand'
 
 
 const Main = (props) => {
@@ -15,7 +17,9 @@ const Main = (props) => {
   const components = {
     Button: ButtonStand,
     Input: InputStand,
-    Modal: ModalStand
+    Modal: ModalStand,
+    CSS: CssStand,
+    JQuery: JqueryStand,
   }
 
   const SelectedElement = components[segment] || Empty

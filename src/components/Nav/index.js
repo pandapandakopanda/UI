@@ -5,7 +5,7 @@ import Button from '../Button'
 
 
 class Nav extends Component {
-  componentsList = ['Button', 'Input', 'Modal']
+  componentsList = ['Button', 'Input', 'Modal', 'CSS', 'JQuery']
 
   state={
     isNavHidden: false,
