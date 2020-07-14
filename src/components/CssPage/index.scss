@@ -1,0 +1,106 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: rgb(69, 199, 188);
+}
+
+.positionAbsolute{
+    position: absolute;
+}
+
+
+.positionRelative {
+    position: relative;
+    background: rgb(155, 147, 148);
+}
+
+.positionFixed {
+    position: fixed;
+    top: 120px;
+    background: white;
+}
+
+.innerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 5px white;
+}
+
+.innerShadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 10px rgb(155, 147, 148);
+    transition: box-shadow 1s;
+    &:hover{
+        box-shadow: inset 0px 0px 10px 5px rgb(155, 147, 148);
+    }
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: rgb(155, 147, 148);
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+.button-get-data{
+    text-align: center;
+    width: 100px;
+    height: 15px;
+    background-color: white;
+    border-radius: 2px;
+    color: rgb(155, 147, 148);
+    cursor: pointer;
+}
+
+.data-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border-radius: 2px;
+    color: rgb(155, 147, 148);
+    cursor: pointer;
+    p{
+        margin:0;
+        padding: 0;
+        height: 20px;
+    }
+}
+
+.data{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
