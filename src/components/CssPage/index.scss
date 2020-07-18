@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 
@@ -42,7 +41,7 @@
     box-shadow: 0px 0px 20px 5px white;
 }
 
-.innerShadow {
+.innerShadow, .innerShadowGlow {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,9 +51,10 @@
     border-radius: 25px;
     box-shadow: inset 0px 0px 10px rgb(155, 147, 148);
     transition: box-shadow 1s;
-    &:hover{
+}
+
+.innerShadowGlow {
         box-shadow: inset 0px 0px 10px 5px rgb(155, 147, 148);
-    }
 }
 
 .timer {
@@ -100,6 +100,7 @@
     display: flex;
     height: 100%;
     width: 100%;
+    margin-left: 20px;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;

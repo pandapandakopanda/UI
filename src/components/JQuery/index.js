@@ -6,14 +6,14 @@ import 'jquery-color'
 
 class JQueryPage extends Component {
   x = 0
-  state={
-    isOn: true
-}
 
-render() {
-  
-  $.fx.off = false
-  console.log('$.fx.off: ', $.fx.off);
+  state={
+    isOn: true,
+  }
+
+  render() {
+    $.fx.off = false
+    console.log('$.fx.off: ', $.fx.off)
 
     $(document).ready(() => {
       $(`.${ST.meow}`).click(() => {
@@ -23,44 +23,40 @@ render() {
       $(`.${ST.header}`).click(() => {
         $(`.${ST.container}`).stop(false).slideToggle('slow')
       })
-
     })
 
-    const off= () => {
-      
-      const div =  $(`.${ST.meow_meow}`)
-    
-      div.css({background: 'white', color: 'rgba(225,225,225,0)'})
-        .animate({height: '5px'})
-        .animate({width: '5px'})
-        .animate({opacity: '0'}, 'slow')
+    const off = () => {
+      const div = $(`.${ST.meow_meow}`)
 
-        this.setState({isOn: false})
+      div.css({ background: 'white', color: 'rgba(225,225,225,0)' })
+        .animate({ height: '5px' })
+        .animate({ width: '5px' })
+        .animate({ opacity: '0' }, 'slow')
+
+      this.setState({ isOn: false })
     }
 
     const on = () => {
+      const div = $(`.${ST.meow_meow}`)
+      div.css({ background: 'red' })
+        .animate({ opacity: '1' }, 'slow')
+        .animate({ height: '300px' })
+        .animate({ width: '300px' })
+        .css({ color: 'black' })
 
-      const div =  $(`.${ST.meow_meow}`)
-      div.css({background: 'red'})
-        .animate({opacity: '1'}, 'slow')
-        .animate({height: '300px'})
-        .animate({width: '300px'})
-        .css({color: 'black'})
-
-      this.setState({isOn: true})
+      this.setState({ isOn: true })
     }
 
 
-
-    const rightLeft=()=>{
+    const rightLeft = () => {
       const div = $(`section:nth-child(4) > .${ST.meow}`)
-      div.animate({opacity: 0}, 1000)
-        .animate({height: '5px'}, 1)
-        .animate({opacity: 0.9}, 'slow')
-        .animate({height: '100px'}, 500)
-        .animate({backgroundColor: "black"}, 200  )
-        .animate({opacity: '1'})
-        .animate({backgroundColor: 'white'}, 500)
+      div.animate({ opacity: 0 }, 1000)
+        .animate({ height: '5px' }, 1)
+        .animate({ opacity: 0.9 }, 'slow')
+        .animate({ height: '100px' }, 500)
+        .animate({ backgroundColor: 'black' }, 200)
+        .animate({ opacity: '1' })
+        .animate({ backgroundColor: 'white' }, 500)
     }
 
     return (
@@ -81,14 +77,14 @@ render() {
         </section>
 
         <section className={ST.sectionWrap}>
-          <Button preset='primary' onclick={this.state.isOn ? off : on} />
+          <Button preset="primary" onclick={this.state.isOn ? off : on} />
           <div className={ST.screen}>
-            <div className={ST.meow_meow} id={ST.four} >BLA BLA BLA</div>
+            <div className={ST.meow_meow} id={ST.four}>BLA BLA BLA</div>
           </div>
         </section>
 
         <section className={ST.sectionWrap}>
-          <Button preset='primary' onclick={rightLeft}/>
+          <Button preset="primary" onclick={rightLeft} />
           <div className={ST.meow} id={ST.one} />
         </section>
 
